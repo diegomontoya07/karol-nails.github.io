@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <title>Karol Nail's Studio</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <ul>
+                    <li><img src="assets/img/Logo4-sinfondo.png" alt="Logo de Karol Nail's Studio" height="50"><a href="index.html">Inicio</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                    <li><a href="Productos-usuario.php">Productos</a></li>
+                    <li><a href="Reserva.php">Reserva tu cita</a></li>
+                    <li><a href="Contactanos.html">Contactanos</a></li>
+                    <li><a href="Busca-empleo.php">Buscas empleo?</a></li>
+                    <li><a href="Admin.html">Admin</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="wrapper">
+        <section class="main">
+            <form action="procesar-admin.php" method="post">
+                <h1>Bienvenid@ Inicia sección</h1>
+                <label for="correo">Correo electronico:</label><br>
+                <input type="text" placeholder="Email" id="correo" name="correo" required>
+                <br>
+                <label for="contraseña">Contraseña:</label> <br>
+                <input type="password" placeholder="Contraseña" id="contraseña" name="contraseña" required><br><br>
+                <input type="submit" value="enviar" class="btn">
+            </form>
+        </section>
+    </section>
+</body>
+
+</html>

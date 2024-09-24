@@ -1,0 +1,225 @@
+/* Reset básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+
+/* Estilos del header */
+
+header {
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.nav-left ul,
+.nav-right ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-left ul li,
+.nav-right ul li {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left ul li img {
+    margin-right: 10px;
+}
+
+.nav-left ul li a,
+.nav-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-right ul li a:hover {
+    color: #ffeb3b;
+}
+
+
+/* Estilos del main */
+
+.wrapper {
+    flex: 1;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+    padding: 20px;
+}
+
+.main h1 {
+    color: #e91e63;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.main p {
+    font-size: 1.1em;
+    color: #e91e63;
+    line-height: 1.8;
+    text-align: justify;
+    background-color: #f8bbd0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.main p::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #c2185b;
+    margin-right: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-align: center;
+    border: 2px solid #e91e63;
+}
+
+table td,
+table th {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid #e91e63;
+}
+
+table tr:first-child td {
+    background-color: #f8bbd0;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(2) td a {
+    color: #e91e63;
+    text-decoration: none;
+}
+
+table tr:nth-child(2) td a:hover {
+    text-decoration: underline;
+}
+
+.map-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.map-container h2 {
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+
+/* Estilos del footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e91e63;
+    color: white;
+    width: 100%;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: column;
+    }
+    .nav-left ul li,
+    .nav-right ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .nav-right ul {
+        margin-top: 10px;
+    }
+    .wrapper {
+        padding: 15px;
+    }
+    .main h1 {
+        font-size: 1.8em;
+    }
+    .main p {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+    table td,
+    table th {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .main h1 {
+        font-size: 1.6em;
+    }
+    .main p {
+        font-size: 0.9em;
+        padding: 8px 10px;
+    }
+    table td,
+    table th {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main h1 {
+        font-size: 1.4em;
+    }
+    .main p {
+        font-size: 0.8em;
+        padding: 5px 8px;
+    }
+    table td,
+    table th {
+        font-size: 0.8em;
+    }
+}

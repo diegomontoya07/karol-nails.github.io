@@ -1,0 +1,222 @@
+/* Estilos generales del cuerpo */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilos del header */
+
+header {
+    background-color: #e91e63;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    /* Permite ajuste en pantallas más pequeñas */
+}
+
+.nav-left ul,
+.nav-right ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Ajusta los elementos cuando no hay suficiente espacio */
+}
+
+.nav-left ul li,
+.nav-right ul li {
+    margin-right: 20px;
+}
+
+.nav-left ul li a,
+.nav-right ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-left ul li img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilos para el título */
+
+h1,
+h2 {
+    color: #e91e63;
+}
+
+
+/* Estilos de la tabla */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table,
+th,
+td {
+    border: 1px solid #e91e63;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #e91e63;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+/* Estilos para los enlaces */
+
+a {
+    color: #e91e63;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilos para los formularios */
+
+form {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border: 1px solid #e91e63;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+}
+
+form,
+h2 {
+    color: #e91e63;
+}
+
+form label {
+    display: block;
+    margin: 5px 0;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #e91e63;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #c2185b;
+}
+
+
+/* Media Queries para Responsividad */
+
+
+/* Pantallas de tablets y menores */
+
+@media (max-width: 1024px) {
+    header nav {
+        padding: 0 10px;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-left ul li,
+    .nav-right ul li {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Pantallas de móviles */
+
+@media (max-width: 768px) {
+    header nav {
+        padding: 0 5px;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-left ul li,
+    .nav-right ul li {
+        margin-bottom: 10px;
+    }
+    table {
+        font-size: 12px;
+        /* Reduce el tamaño del texto en tablas para móviles */
+    }
+    form {
+        width: 90%;
+        /* Ajusta el ancho del formulario para móviles */
+    }
+}
+
+
+/* Pantallas de móviles muy pequeñas */
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 5px;
+    }
+    form input[type="submit"] {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 1.5em;
+        /* Reduce el tamaño del título para pantallas muy pequeñas */
+    }
+    h2 {
+        font-size: 1.2em;
+        /* Reduce el tamaño de los subtítulos para pantallas muy pequeñas */
+    }
+}

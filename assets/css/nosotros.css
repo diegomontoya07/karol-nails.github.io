@@ -1,0 +1,188 @@
+/* Estilo general */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+/* Estilo del header y navegación */
+
+header {
+    background-color: #e91e63;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    /* Permite el ajuste en pantallas más pequeñas */
+}
+
+.nav-left ul,
+.nav-right ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left ul li,
+.nav-right ul li {
+    margin-right: 20px;
+}
+
+.nav-left ul li a,
+.nav-right ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-left ul li img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+/* Estilo de la sección principal */
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.main {
+    margin: 20px 0;
+}
+
+.main h1,
+.main h2 {
+    color: #CBA135;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main p {
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.main ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.main ul li {
+    background-color: #f4f4f4;
+    border-left: 5px solid #e91e63;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #555;
+}
+
+
+/* Estilo del footer */
+
+footer {
+    background-color: #e91e63;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+
+/* Enlaces */
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #007BFF;
+}
+
+
+/* Media Queries para Responsividad */
+
+
+/* Pantallas de tabletas y menores */
+
+@media (max-width: 1024px) {
+    header nav {
+        padding: 0 10px;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-left ul li,
+    .nav-right ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .wrapper {
+        padding: 15px;
+    }
+}
+
+
+/* Pantallas de móviles */
+
+@media (max-width: 768px) {
+    header nav {
+        padding: 0 5px;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-left ul li,
+    .nav-right ul li {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    .wrapper {
+        padding: 10px;
+    }
+}
+
+
+/* Pantallas de móviles muy pequeñas */
+
+@media (max-width: 480px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .nav-left ul li,
+    .nav-right ul li {
+        margin-bottom: 8px;
+    }
+    .wrapper {
+        padding: 5px;
+    }
+}

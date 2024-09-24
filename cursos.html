@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/cursos.css">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <title>Cursos</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <ul>
+                    <li><img src="assets/img/Logo4-sinfondo.png" alt="Logo de Karol Nail's Studio" height="50"><a href="index.html">Inicio</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                    <li><a href="Productos-usuario.php">Productos</a></li>
+                    <li><a href="Reserva.php">Reserva tu cita</a></li>
+                    <li><a href="Contactanos.html">Contactanos</a></li>
+                    <li><a href="Busca-empleo.php">Buscas empleo?</a></li>
+                    <li><a href="Admin.html">Admin</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="wrapper">
+        <div class="curso-container">
+            <!-- Curso de Uñas Acrílicas -->
+            <div class="curso">
+                <div class="curso-img-slider">
+                    <img src="assets/img/acrilico.jpeg" alt="Curso de Uñas Acrílicas">
+                    <img src="assets/img/acrilico2.jpeg" alt="Curso de Uñas Acrílicas">
+                    <img src="assets/img/gel 2.jpeg" alt="Curso de Uñas Acrílicas">
+                </div>
+                <table>
+                    <tr>
+                        <th colspan="2">Curso de Uñas Acrílicas</th>
+                    </tr>
+                    <tr>
+                        <td>1. Preparación de la uña</td>
+                        <td>Precio por clase: $50,000</td>
+                    </tr>
+                    <tr>
+                        <td>2. Aplicación de acrílico</td>
+                        <td>Inscripción: $100,000</td>
+                    </tr>
+                    <tr>
+                        <td>3. Diseño y decoración</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4. Mantenimiento y relleno</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <a href="acrilicas.html" class="btn-saber-mas">Saber más...</a>
+            </div>
+
+            <!-- Curso de Uñas Semipermanente -->
+            <div class="curso">
+                <div class="curso-img-slider">
+                    <img src="assets/img/semi.jpeg" alt="Curso de Uñas Semipermanente">
+                    <img src="assets/img/semi 2.jpeg" alt="Curso de Uñas Semipermanente">
+                    <img src="assets/img/acrigel_rosas.jpeg" alt="Curso de Uñas Semipermanente">
+                </div>
+                <table>
+                    <tr>
+                        <th colspan="2">Curso de Uñas Semipermanente</th>
+                    </tr>
+                    <tr>
+                        <td>1. Preparación de la uña</td>
+                        <td>Precio por clase: $45,000</td>
+                    </tr>
+                    <tr>
+                        <td>2. Aplicación de esmalte</td>
+                        <td>Inscripción: $90,000</td>
+                    </tr>
+                    <tr>
+                        <td>3. Diseño y decoración</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4. Retiro de esmalte</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <a href="semipermanente.html" class="btn-saber-mas">Saber más...</a>
+            </div>
+
+            <!-- Curso de Uñas Tradicional -->
+            <div class="curso">
+                <div class="curso-img-slider">
+                    <img src="assets/img/extra.jpeg" alt="Curso de Uñas Tradicional">
+                    <img src="assets/img/press_onn.jpeg" alt="Curso de Uñas Tradicional">
+                    <img src="assets/img/press onn2.jpeg" alt="Curso de Uñas Tradicional">
+                </div>
+                <table>
+                    <tr>
+                        <th colspan="2">Curso de Uñas Tradicional</th>
+                    </tr>
+                    <tr>
+                        <td>1. Preparación de la uña</td>
+                        <td>Precio por clase: $40,000</td>
+                    </tr>
+                    <tr>
+                        <td>2. Aplicación de esmalte</td>
+                        <td>Inscripción: $80,000</td>
+                    </tr>
+                    <tr>
+                        <td>3. Diseño y decoración</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4. Cuidado de las uñas</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <a href="tradicional.html" class="btn-saber-mas">Saber más...</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Karol Nail's Studio 2024</p>
+        <br>
+        <p>Karolnailsstudio2024@gmail.com</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliders = document.querySelectorAll('.curso-img-slider');
+
+            sliders.forEach(slider => {
+                let images = slider.querySelectorAll('img');
+                let currentIndex = 0;
+
+                function showImage(index) {
+                    images.forEach((img, i) => {
+                        img.style.display = i === index ? 'block' : 'none';
+                    });
+                }
+
+                showImage(currentIndex);
+
+                slider.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    showImage(currentIndex);
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

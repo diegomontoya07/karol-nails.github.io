@@ -1,0 +1,284 @@
+/* Estilos generales */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilo del header */
+
+header {
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 0;
+}
+
+
+/* Estilo del nav */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    /* Permite el ajuste en pantallas más pequeñas */
+}
+
+.nav-left ul,
+.nav-right ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    /* Permite el ajuste de los elementos */
+}
+
+.nav-left ul li,
+.nav-right ul li {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left ul li img {
+    margin-right: 10px;
+}
+
+.nav-left ul li a,
+.nav-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-right ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilo del wrapper */
+
+.wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilo principal */
+
+.main {
+    padding: 20px;
+}
+
+
+/* Estilo de los encabezados */
+
+h1 {
+    color: #333;
+}
+
+
+/* Estilos del formulario */
+
+form {
+    margin: 20px 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e45484;
+}
+
+
+/* Estilos de la notificación */
+
+.notification {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 80%;
+    max-width: 600px;
+    border: 2px solid #e91e63;
+    /* Borde rosa */
+}
+
+.notification.success {
+    background-color: #fff;
+    /* Fondo blanco para un contraste claro */
+    color: #e91e63;
+    /* Texto rosa para coincidir con el borde */
+}
+
+.notification.error {
+    background-color: #ffe5e5;
+    /* Fondo rosa claro */
+    color: #721c24;
+    /* Texto rojo oscuro */
+}
+
+.notification h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.notification p {
+    margin: 10px 0;
+}
+
+.notification button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #e91e63;
+    /* Botón rosa */
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.notification button:hover {
+    background-color: #d81b60;
+    /* Rosa más oscuro al pasar el ratón */
+}
+
+.notification button:last-child {
+    margin-right: 0;
+}
+
+
+/* Media Queries para Responsividad */
+
+
+/* Pantallas de tabletas y menores */
+
+@media (max-width: 1024px) {
+    nav {
+        padding: 0 10px;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-left ul li,
+    .nav-right ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+        /* Elimina el margen derecho para pantallas más pequeñas */
+    }
+    .wrapper {
+        padding: 15px;
+    }
+    form input,
+    form select {
+        width: calc(100% - 18px);
+        /* Ajusta el ancho en pantallas más pequeñas */
+    }
+    .notification {
+        top: 30%;
+    }
+}
+
+
+/* Pantallas de móviles */
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0 5px;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-left ul li,
+    .nav-right ul li {
+        margin-bottom: 8px;
+        margin-right: 0;
+        /* Elimina el margen derecho */
+    }
+    .wrapper {
+        padding: 10px;
+    }
+    form input,
+    form select {
+        width: calc(100% - 14px);
+        /* Ajusta el ancho para móviles */
+    }
+    .notification {
+        width: 90%;
+        top: 40%;
+    }
+}
+
+
+/* Pantallas de móviles muy pequeñas */
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .nav-left ul li,
+    .nav-right ul li {
+        margin-bottom: 8px;
+    }
+    .wrapper {
+        padding: 5px;
+    }
+    form input,
+    form select {
+        width: calc(100% - 10px);
+        /* Ajusta el ancho para pantallas muy pequeñas */
+    }
+    .notification {
+        width: 95%;
+        top: 50%;
+    }
+}

@@ -1,0 +1,205 @@
+/* Asegurando que el body y html ocupen toda la altura de la página */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fdf0f8;
+    color: #333;
+}
+
+
+/* Estilo del header */
+
+header {
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.nav-left ul,
+.nav-right ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-left ul li,
+.nav-right ul li {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left ul li img {
+    margin-right: 10px;
+}
+
+.nav-left ul li a,
+.nav-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-right ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Wrapper y Main Section para el Sticky Footer */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Video Container Styles */
+
+.video-container {
+    flex: 1;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Description Styles */
+
+.description {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.description h1 {
+    font-size: 24px;
+    color: #c2185b;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.description p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* Footer Styles */
+
+footer {
+    background-color: #e91e63;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .nav-left ul li,
+    .nav-right ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    .main {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    .video-container {
+        width: 100%;
+    }
+    .description {
+        padding-left: 0;
+    }
+    .description h1 {
+        font-size: 22px;
+    }
+    .description p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 15px;
+    }
+    .video-container {
+        margin-bottom: 15px;
+    }
+    .description {
+        padding-left: 0;
+    }
+    .description h1 {
+        font-size: 20px;
+    }
+    .description p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        padding: 10px;
+    }
+    .description h1 {
+        font-size: 18px;
+    }
+    .description p {
+        font-size: 12px;
+    }
+}

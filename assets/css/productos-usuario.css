@@ -1,0 +1,204 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header */
+
+header {
+    background-color: #e91e63;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .nav-left ul,
+header .nav-right ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header .nav-left li,
+header .nav-right li {
+    margin: 0 10px;
+}
+
+header .nav-left a,
+header .nav-right a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header .nav-left img {
+    vertical-align: middle;
+}
+
+
+/* Main Section */
+
+.wrapper {
+    padding: 20px;
+}
+
+.main h1 {
+    color: #e91e63;
+}
+
+
+/* Productos Container */
+
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+/* Producto Card */
+
+.producto-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: scale(1.05);
+}
+
+.producto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.producto-card h3 {
+    color: #e91e63;
+}
+
+.producto-card p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+
+/* Action Button */
+
+.producto-card .btn {
+    margin-top: 15px;
+}
+
+.producto-card .whatsapp-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366;
+    /* Color de WhatsApp */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.producto-card .whatsapp-btn:hover {
+    background-color: #1EBE58;
+    /* Un tono más oscuro de verde */
+}
+
+
+/* Responsive Design */
+
+
+/* Tablets y móviles grandes (768px y menores) */
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    header .nav-left ul,
+    header .nav-right ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header .nav-left li,
+    header .nav-right li {
+        margin: 5px 0;
+    }
+    .productos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .producto-card {
+        width: 90%;
+    }
+    .producto-card .whatsapp-btn {
+        padding: 8px 16px;
+    }
+}
+
+
+/* Móviles pequeños (480px y menores) */
+
+@media (max-width: 480px) {
+    header .nav-left a,
+    header .nav-right a {
+        font-size: 14px;
+    }
+    .producto-card {
+        width: 100%;
+        padding: 15px;
+    }
+    .producto-card h3 {
+        font-size: 18px;
+    }
+    .producto-card p {
+        font-size: 14px;
+    }
+    .producto-card .whatsapp-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+
+/* Móviles muy pequeños (360px y menores) */
+
+@media (max-width: 360px) {
+    header .nav-left a,
+    header .nav-right a {
+        font-size: 12px;
+    }
+    .producto-card h3 {
+        font-size: 16px;
+    }
+    .producto-card p {
+        font-size: 12px;
+    }
+    .producto-card .whatsapp-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}

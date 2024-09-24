@@ -1,0 +1,178 @@
+/* Reset básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #F5F5F5;
+}
+
+
+/* Estilo del header */
+
+header {
+    background-color: #e91e63;
+    color: white;
+    padding: 15px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-left ul,
+.nav-right ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-left ul li,
+.nav-right ul li {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left ul li img {
+    margin-right: 10px;
+}
+
+.nav-left ul li a,
+.nav-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-right ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilo del contenedor principal */
+
+.wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+/* Estilos para la sección principal */
+
+.main h1 {
+    color: #CBA135;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.main p {
+    margin-bottom: 20px;
+}
+
+.main ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.main ul li {
+    margin-bottom: 10px;
+}
+
+.main a {
+    color: #e91e63;
+    text-decoration: none;
+}
+
+.main a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilo del footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e91e63;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+    .wrapper {
+        padding: 15px;
+    }
+    .main h1 {
+        font-size: 1.75em;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    .nav-left ul li,
+    .nav-right ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .wrapper {
+        padding: 10px;
+    }
+    .main h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main h1 {
+        font-size: 1.25em;
+    }
+    .main p,
+    .main ul,
+    .main ul li {
+        font-size: 0.9em;
+    }
+    nav {
+        padding: 0 5px;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        gap: 10px;
+    }
+}

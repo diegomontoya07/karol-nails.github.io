@@ -1,0 +1,228 @@
+/* General Styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf0f8;
+    color: #333;
+}
+
+header {
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-left ul,
+.nav-right ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-left ul li,
+.nav-right ul li {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left ul li img {
+    margin-right: 10px;
+}
+
+.nav-left ul li a,
+.nav-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-right ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Main Section */
+
+.wrapper {
+    padding: 20px;
+}
+
+.main {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #c2185b;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+/* Estilos de Tablas Glamour */
+
+table {
+    width: 100%;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+table th {
+    background-color: #c2185b;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+table td {
+    padding: 20px;
+    background-color: #fff;
+    color: #555;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 2px solid #f8bbd0;
+}
+
+table tr:hover td {
+    background-color: #fce4ec;
+    color: #c2185b;
+    cursor: pointer;
+}
+
+
+/* Configuración de Videos */
+
+table video {
+    width: 100%;
+    max-width: 400px;
+    /* Tamaño máximo */
+    height: 225px;
+    /* Proporción 16:9 */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+table p {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* Footer Styles */
+
+footer {
+    background-color: #e91e63;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* Responsive Design */
+
+
+/* Pantallas de tabletas (768px y menores) */
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-left ul li,
+    .nav-right ul li {
+        margin: 5px 0;
+    }
+    .main {
+        padding: 20px;
+    }
+    table th,
+    table td {
+        font-size: 14px;
+    }
+    .main h1 {
+        font-size: 24px;
+    }
+}
+
+
+/* Pantallas de móviles pequeños (480px y menores) */
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 5px;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .nav-left ul li,
+    .nav-right ul li {
+        margin-bottom: 5px;
+    }
+    .main {
+        padding: 15px;
+    }
+    table {
+        font-size: 12px;
+    }
+    .main h1 {
+        font-size: 20px;
+    }
+}
+
+
+/* Pantallas de móviles muy pequeñas (360px y menores) */
+
+@media (max-width: 360px) {
+    .main {
+        padding: 10px;
+    }
+    table th,
+    table td {
+        padding: 8px;
+    }
+    .main h1 {
+        font-size: 18px;
+    }
+    table video {
+        height: auto;
+    }
+}
